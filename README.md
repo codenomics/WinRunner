@@ -6,15 +6,15 @@
 
 ## Download
 
-**Latest version: v1.1** (Oct 9, 2026)
+**Latest version: v1.2** (Oct 9, 2026)
 
-- [WinRunner_v1.1_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.1/WinRunner_v1.1_no-install.zip) - 100 KB
-- [WinRunner_v1.1_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.1/WinRunner_v1.1_Setup.exe) - 137 KB
-- [WinRunner_v1.1_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.1/WinRunner_v1.1_source.zip) - 90 KB
+- [WinRunner_v1.2_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.2/WinRunner_v1.2_no-install.zip) - 101 KB
+- [WinRunner_v1.2_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.2/WinRunner_v1.2_Setup.exe) - 137 KB
+- [WinRunner_v1.2_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.2/WinRunner_v1.2_source.zip) - 90 KB
 
-What's new in v1.1:
+What's new in v1.2:
 
-- Fixed the app menu's Blur and Frosted glass showing an old picture (slow to follow a new wallpaper, ghost of a moved window)
+- The bar now hides while a full-screen game (like Star Citizen) is in front, and no longer flickers back when focus bounces
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 

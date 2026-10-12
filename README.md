@@ -6,15 +6,16 @@
 
 ## Download
 
-**Latest version: v1.2** (Oct 9, 2026)
+**Latest version: v1.3** (Oct 12, 2026)
 
-- [WinRunner_v1.2_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.2/WinRunner_v1.2_no-install.zip) - 101 KB
-- [WinRunner_v1.2_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.2/WinRunner_v1.2_Setup.exe) - 137 KB
-- [WinRunner_v1.2_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.2/WinRunner_v1.2_source.zip) - 90 KB
+- [WinRunner_v1.3_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.3/WinRunner_v1.3_no-install.zip) - 104 KB
+- [WinRunner_v1.3_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.3/WinRunner_v1.3_Setup.exe) - 140 KB
 
-What's new in v1.2:
+What's new in v1.3:
 
-- The bar now hides while a full-screen game (like Star Citizen) is in front, and no longer flickers back when focus bounces
+- New Spotify mini player on the bar: song and artist, previous / play-pause / next (controls only the Spotify app)
+- The player's width can be set separately for each monitor (Settings > Widgets)
+- Title-only mode: hide the buttons, click the title to play / pause, double-click for the next song
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 
@@ -33,10 +34,6 @@ Older versions are on the [Releases page](https://github.com/codenomics/WinRunne
 3. Open the folder and double-click the app's .exe. Nothing is installed; delete the folder to remove it.
 
 Windows says "Windows protected your PC"? Click More info > Run anyway. It shows that for apps without a paid signing certificate.
-
-## Source code
-
-Want to see how it works, or build it yourself? Download the file ending in `_source.zip` above, extract it and double-click `Build.bat`. It only uses the C# compiler that already comes with Windows, so there is nothing to install.
 
 ## More details
 
@@ -143,6 +140,13 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     Clicking the network icon shows what you're connected with, plus
     links to Wi-Fi networks and the Windows network settings.
     The Windows Security (shield) icon opens Windows Security.
+- Spotify player (Settings -> Widgets, on by default on the main bar)
+    Shows the song and artist from the Spotify desktop app, with
+    previous, play/pause and next buttons. It only reads and controls
+    Spotify, nothing else that plays sound. Click the song name to bring
+    Spotify forward (or start it). Each monitor has its own width.
+    You can hide the buttons and show only the title: click = play/pause,
+    double-click = next song, middle-click = open Spotify.
 - Clock
     Click it for a calendar (arrows change the month).
 - Show desktop (thin strip at the far right end)
@@ -158,7 +162,7 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
 SETTINGS
 --------
 Changes show on the bar right away and are remembered. Pick a category
-on the left (Menu, Bars, Buttons, Look, Theme, Taskbar & tray, About).
+on the left (Menu, Bars, Buttons, Widgets, Look, Theme, Taskbar & tray, About).
   Menu icon             Choose Menu Icon... picks your own picture for the
                         menu button (PNG, JPG or ICO). It can be:
                           - one picture, or
@@ -177,6 +181,8 @@ on the left (Menu, Bars, Buttons, Look, Theme, Taskbar & tray, About).
   Buttons               one button per window, or one per app (grouped);
                         icon + title, icons only, or titles only
   Buttons               also: the widest a button with a title may get
+  Widgets               the Spotify player: off, main monitor's bar or every
+                        bar, its width for each monitor, and the buttons on/off
   Look                  Solid, Clear (see-through), Blur, or Frosted glass,
                         and how strong the background color is (0% fully
                         see-through, 100% solid; each look remembers its

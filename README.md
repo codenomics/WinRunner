@@ -1,21 +1,26 @@
 # WinRunner
 
+A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open apps, pinned apps, tray icons, volume and clock on one bar, plus a menu with search, categories, favorites and power buttons. It can sit next to the Windows taskbar or take its place.
+
 > This application is built by AI. I made this for myself and I'm uploading it to GitHub for backup and to share in case anyone can get any use out of it. It's pretty specific to my setup and my needs, but if you can get any use out of it, then enjoy.
 >
 > Use at your own risk. I offer no warranty or guarantees for this software.
 
 ## Download
 
-**Latest version: v1.3** (Oct 12, 2026)
+**Latest version: v1.4** (Oct 16, 2026)
 
-- [WinRunner_v1.3_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.3/WinRunner_v1.3_no-install.zip) - 104 KB
-- [WinRunner_v1.3_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.3/WinRunner_v1.3_Setup.exe) - 140 KB
+- [WinRunner_v1.4_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.4/WinRunner_v1.4_no-install.zip) - 119 KB
+- [WinRunner_v1.4_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.4/WinRunner_v1.4_Setup.exe) - 155 KB
+- [WinRunner_v1.4_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.4/WinRunner_v1.4_source.zip) - 108 KB
 
-What's new in v1.3:
+What's new in v1.4:
 
-- New Spotify mini player on the bar: song and artist, previous / play-pause / next (controls only the Spotify app)
-- The player's width can be set separately for each monitor (Settings > Widgets)
-- Title-only mode: hide the buttons, click the title to play / pause, double-click for the next song
+- New snap layouts: pick a layout (halves, thirds, quarters ...) and a spot, then fill the other spots with your open windows
+- Opens from a button on the bar or with Win+Z (each can be turned off in Settings > Widgets); optional: drag a window to the top edge of a screen (off by default)
+- Adjustable space around snapped windows; the last layout you used is highlighted
+- Resize snapped windows together: drag the edge two windows share and the other one follows (can be turned off in Settings > Widgets)
+- Draw your own snap layouts (Settings > Widgets > Snap layouts > New layout): split the screen, drag the lines, name it; it shows up in the picker with the built-in ones
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 
@@ -35,18 +40,13 @@ Older versions are on the [Releases page](https://github.com/codenomics/WinRunne
 
 Windows says "Windows protected your PC"? Click More info > Run anyway. It shows that for apps without a paid signing certificate.
 
+## Source code
+
+Want to see how it works, or build it yourself? Download the file ending in `_source.zip` above, extract it and double-click `Build.bat`. It only uses the C# compiler that already comes with Windows, so there is nothing to install.
+
 ## More details
 
 ```
-WINRUNNER
-=========
-
-A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your
-open apps, pinned apps, tray icons, volume and clock on one bar, plus a
-menu with search, categories, favorites and power buttons. It can sit
-next to the Windows taskbar or take its place.
-
-
 GETTING STARTED
 ---------------
 Pick one. Both give you the same app.
@@ -140,6 +140,26 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     Clicking the network icon shows what you're connected with, plus
     links to Wi-Fi networks and the Windows network settings.
     The Windows Security (shield) icon opens Windows Security.
+- Snap layouts (button just left of the Spotify player, or Win+Z)
+    Opens a small picker of screen layouts (halves, thirds, quarters ...).
+    Click a spot and the window you were just in snaps there; then click
+    other open windows to fill the empty spots. Layouts stop at the bar.
+    Optional (off by default, switch it on in Settings -> Widgets): drag a
+    window to the top edge of a screen and the layouts appear there; move
+    over a spot and let go. Windows already maximizes at the top edge and
+    fills the halves at the left and right edges by itself.
+    Settings -> Widgets has the space around windows, and switches for the
+    button, Win+Z and the dragging.
+    Draw your own layouts: Settings -> Widgets -> Snap layouts -> New
+    layout. Click a spot, split it side by side or top / bottom, drag the
+    lines to set the sizes, give it a name and Save. Your layouts show up in
+    the picker after the built-in ones (Edit or Delete them in Settings).
+    Windows that sit side by side (or stacked) resize together: drag the
+    edge they share and the other window follows. Switch it off in
+    Settings -> Widgets.
+    Keep Windows' own "Snap windows" switch ON (Windows Settings -> System
+    -> Multitasking); with it off, Windows won't let you drag a maximized
+    window down by its title bar. Untick the options under it instead.
 - Spotify player (Settings -> Widgets, on by default on the main bar)
     Shows the song and artist from the Spotify desktop app, with
     previous, play/pause and next buttons. It only reads and controls
@@ -181,7 +201,7 @@ on the left (Menu, Bars, Buttons, Widgets, Look, Theme, Taskbar & tray, About).
   Buttons               one button per window, or one per app (grouped);
                         icon + title, icons only, or titles only
   Buttons               also: the widest a button with a title may get
-  Widgets               the Spotify player: off, main monitor's bar or every
+  Widgets               the Snap layouts button and Win+Z; the Spotify player: off, main monitor's bar or every
                         bar, its width for each monitor, and the buttons on/off
   Look                  Solid, Clear (see-through), Blur, or Frosted glass,
                         and how strong the background color is (0% fully

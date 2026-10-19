@@ -8,19 +8,15 @@ A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open ap
 
 ## Download
 
-**Latest version: v1.4** (Oct 16, 2026)
+**Latest version: v1.5** (Oct 19, 2026)
 
-- [WinRunner_v1.4_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.4/WinRunner_v1.4_no-install.zip) - 119 KB
-- [WinRunner_v1.4_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.4/WinRunner_v1.4_Setup.exe) - 155 KB
-- [WinRunner_v1.4_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.4/WinRunner_v1.4_source.zip) - 108 KB
+- [WinRunner_v1.5_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.5/WinRunner_v1.5_no-install.zip) - 121 KB
+- [WinRunner_v1.5_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.5/WinRunner_v1.5_Setup.exe) - 156 KB
+- [WinRunner_v1.5_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.5/WinRunner_v1.5_source.zip) - 110 KB
 
-What's new in v1.4:
+What's new in v1.5:
 
-- New snap layouts: pick a layout (halves, thirds, quarters ...) and a spot, then fill the other spots with your open windows
-- Opens from a button on the bar or with Win+Z (each can be turned off in Settings > Widgets); optional: drag a window to the top edge of a screen (off by default)
-- Adjustable space around snapped windows; the last layout you used is highlighted
-- Resize snapped windows together: drag the edge two windows share and the other one follows (can be turned off in Settings > Widgets)
-- Draw your own snap layouts (Settings > Widgets > Snap layouts > New layout): split the screen, drag the lines, name it; it shows up in the picker with the built-in ones
+- Portrait (tall) screens: drag a window to the upper part of the left or right edge for the top half, or the lower part for the bottom half (can be turned off in Settings > Widgets)
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 
@@ -150,6 +146,9 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     fills the halves at the left and right edges by itself.
     Settings -> Widgets has the space around windows, and switches for the
     button, Win+Z and the dragging.
+    Tall (portrait) screens: drag a window to the left or right edge -
+    the upper part gives the top half, the lower part the bottom half.
+    (Settings -> Widgets can switch this off.)
     Draw your own layouts: Settings -> Widgets -> Snap layouts -> New
     layout. Click a spot, split it side by side or top / bottom, drag the
     lines to set the sizes, give it a name and Save. Your layouts show up in

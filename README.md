@@ -8,15 +8,21 @@ A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open ap
 
 ## Download
 
-**Latest version: v1.5** (Oct 19, 2026)
+**Latest version: v1.6** (Nov 3, 2026)
 
-- [WinRunner_v1.5_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.5/WinRunner_v1.5_no-install.zip) - 121 KB
-- [WinRunner_v1.5_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.5/WinRunner_v1.5_Setup.exe) - 156 KB
-- [WinRunner_v1.5_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.5/WinRunner_v1.5_source.zip) - 110 KB
+- [WinRunner_v1.6_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.6/WinRunner_v1.6_no-install.zip) - 124 KB
+- [WinRunner_v1.6_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.6/WinRunner_v1.6_Setup.exe) - 160 KB
+- [WinRunner_v1.6_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.6/WinRunner_v1.6_source.zip) - 113 KB
 
-What's new in v1.5:
+What's new in v1.6:
 
-- Portrait (tall) screens: drag a window to the upper part of the left or right edge for the top half, or the lower part for the bottom half (can be turned off in Settings > Widgets)
+- Fixed: resizing snapped windows together could push a neighboring window down off the screen
+- A tiny slip on the shared edge (under 16 px) is now ignored and the windows are put back
+- The log now says when a resize-together happened, to help track down windows that move on their own
+- Fixed: pulling a snapped window out by its title bar no longer resizes the window next to it
+- New: right-click an app in the Start menu to Open file location or Hide from menu
+- New: Settings > Menu > Menu apps: add your own apps or shortcuts to the menu and bring hidden apps back
+- Fixed: when a monitor briefly flips to a wrong layout (sleep, wake, re-plug), the bar and the screen area are no longer set up against it, so windows no longer end up resized and the bar no longer ends up off the screen edge
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 

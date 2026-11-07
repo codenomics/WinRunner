@@ -8,21 +8,17 @@ A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open ap
 
 ## Download
 
-**Latest version: v1.6** (Nov 3, 2026)
+**Latest version: v1.7** (Nov 7, 2026)
 
-- [WinRunner_v1.6_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.6/WinRunner_v1.6_no-install.zip) - 124 KB
-- [WinRunner_v1.6_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.6/WinRunner_v1.6_Setup.exe) - 160 KB
-- [WinRunner_v1.6_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.6/WinRunner_v1.6_source.zip) - 113 KB
+- [WinRunner_v1.7_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.7/WinRunner_v1.7_no-install.zip) - 159 KB
+- [WinRunner_v1.7_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.7/WinRunner_v1.7_Setup.exe) - 194 KB
+- [WinRunner_v1.7_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.7/WinRunner_v1.7_source.zip) - 145 KB
 
-What's new in v1.6:
+What's new in v1.7:
 
-- Fixed: resizing snapped windows together could push a neighboring window down off the screen
-- A tiny slip on the shared edge (under 16 px) is now ignored and the windows are put back
-- The log now says when a resize-together happened, to help track down windows that move on their own
-- Fixed: pulling a snapped window out by its title bar no longer resizes the window next to it
-- New: right-click an app in the Start menu to Open file location or Hide from menu
-- New: Settings > Menu > Menu apps: add your own apps or shortcuts to the menu and bring hidden apps back
-- Fixed: when a monitor briefly flips to a wrong layout (sleep, wake, re-plug), the bar and the screen area are no longer set up against it, so windows no longer end up resized and the bar no longer ends up off the screen edge
+- Fixed: maximized windows no longer flicker or resize every minute on the main screen while the Windows taskbar is hidden
+- New: WallRunner is built in. Settings -> Wallpaper changes the wallpaper on each monitor from its own folder (your WallRunner folders and timer carry over), with Wallpaper settings, Next wallpaper, Pause, Crop and Manage pictures in a Wallpaper sub-menu on the bar's right-click menu
+- Fixed: windows on the other monitors (like Discord on a portrait screen) no longer resize by themselves now and then
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 
@@ -225,6 +221,22 @@ themselves after a second or two.
 
 When a game or video goes full screen, the bar on that monitor stops
 staying on top so it doesn't cover it.
+
+
+WALLPAPER (Settings -> Wallpaper)
+---------------------------------
+WinRunner can change the wallpaper on each monitor from its own folder of
+pictures (this used to be the separate WallRunner app; your folders and
+timer carry over, and are now kept in WinRunner's
+own settings folder).
+Tick "Change the wallpaper on each monitor..." and use
+Wallpaper settings... to pick a folder per monitor, how often it changes,
+the order (random or in order) and how pictures fit.
+Right-click the bar and point at Wallpaper for Wallpaper settings...,
+Next wallpaper, Pause rotation, Crop a picture for a monitor... and
+Manage pictures...
+Turning it on closes the WallRunner app and stops it starting with
+Windows, so the two don't both change the wallpaper.
 
 
 THEMES (Settings -> Theme)

@@ -8,17 +8,15 @@ A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open ap
 
 ## Download
 
-**Latest version: v1.7** (Nov 7, 2026)
+**Latest version: v1.8** (Nov 7, 2026)
 
-- [WinRunner_v1.7_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.7/WinRunner_v1.7_no-install.zip) - 159 KB
-- [WinRunner_v1.7_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.7/WinRunner_v1.7_Setup.exe) - 194 KB
-- [WinRunner_v1.7_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.7/WinRunner_v1.7_source.zip) - 145 KB
+- [WinRunner_v1.8_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.8/WinRunner_v1.8_no-install.zip) - 160 KB
+- [WinRunner_v1.8_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.8/WinRunner_v1.8_Setup.exe) - 194 KB
+- [WinRunner_v1.8_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.8/WinRunner_v1.8_source.zip) - 146 KB
 
-What's new in v1.7:
+What's new in v1.8:
 
-- Fixed: maximized windows no longer flicker or resize every minute on the main screen while the Windows taskbar is hidden
-- New: WallRunner is built in. Settings -> Wallpaper changes the wallpaper on each monitor from its own folder (your WallRunner folders and timer carry over), with Wallpaper settings, Next wallpaper, Pause, Crop and Manage pictures in a Wallpaper sub-menu on the bar's right-click menu
-- Fixed: windows on the other monitors (like Discord on a portrait screen) no longer resize by themselves now and then
+- Fixed: some apps (like NVIDIA Profile Inspector Revamped) crashed at start while WinRunner showed the tray icons
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 

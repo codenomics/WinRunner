@@ -8,15 +8,21 @@ A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open ap
 
 ## Download
 
-**Latest version: v1.8** (Nov 7, 2026)
+**Latest version: v1.9** (Nov 12, 2026)
 
-- [WinRunner_v1.8_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.8/WinRunner_v1.8_no-install.zip) - 160 KB
-- [WinRunner_v1.8_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.8/WinRunner_v1.8_Setup.exe) - 194 KB
-- [WinRunner_v1.8_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.8/WinRunner_v1.8_source.zip) - 146 KB
+- [WinRunner_v1.9_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.9/WinRunner_v1.9_no-install.zip) - 168 KB
+- [WinRunner_v1.9_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.9/WinRunner_v1.9_Setup.exe) - 203 KB
+- [WinRunner_v1.9_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.9/WinRunner_v1.9_source.zip) - 156 KB
 
-What's new in v1.8:
+What's new in v1.9:
 
-- Fixed: some apps (like NVIDIA Profile Inspector Revamped) crashed at start while WinRunner showed the tray icons
+- New: choose which monitor's bar shows the tray icons (Settings -> Taskbar & tray)
+- Fixed: maximized and snapped windows could flicker or resize by themselves (Windows kept leaving WinRunner's bars out of the screen area)
+- New: you can switch Windows' own Snap windows off: WinRunner now lets you drag a maximized window down by its title bar (Settings -> Widgets -> Snap layouts)
+- New: a snapped window gets its old size back when you drag it away by its title bar
+- New: calculator in the menu search: type a sum like 15*8 or 20% of 340 and press Enter to copy the answer
+- New: an optional second bar along the other edge of the screen, and you choose what goes on each bar: menu, open apps, tray, clock, Spotify and more (Settings -> Bars), each on the monitors you pick
+- Win+E opens FileRunner when FileRunner is set as your file browser, even when Windows ignores that setting
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 
@@ -85,6 +91,9 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     - Search box (top): start typing to search ALL apps, then press
       Enter (or click an app) to open it. Esc clears the search, a
       second Esc closes the menu. Up/Down arrows move the highlight.
+      Calculator: type a sum like 15*8, 20% of 340, 200 + 15% or
+      (3+4)^2 and the answer shows above the apps. Press Enter (or
+      click the answer) to copy it. You can also use x, / , ^ and sqrt.
     - Categories (middle): All apps, Recently used, Runner Suite (apps
       whose name ends in "Runner"), Games,
       Internet, Media, Office, Development, System, Utilities, Other.
@@ -120,7 +129,8 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     A button that pulses pink means the app wants your attention.
     Hover preview (switch it on in Settings): rest the mouse on a button
     to see the window; click the picture to switch to it, x to close it.
-- Tray icons and volume (left of the clock, main monitor's bar)
+- Tray icons and volume (left of the clock, main monitor's bar; Settings ->
+  Taskbar & tray can put the tray icons on another monitor's bar)
     While WinRunner has the Windows taskbar hidden, apps' tray icons
     (Discord, Steam ...) show here. Left-click, right-click and
     double-click work like on the Windows taskbar.
@@ -156,9 +166,14 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     Windows that sit side by side (or stacked) resize together: drag the
     edge they share and the other window follows. Switch it off in
     Settings -> Widgets.
-    Keep Windows' own "Snap windows" switch ON (Windows Settings -> System
-    -> Multitasking); with it off, Windows won't let you drag a maximized
-    window down by its title bar. Untick the options under it instead.
+    You can switch Windows' own "Snap windows" OFF (Windows Settings ->
+    System -> Multitasking) so only WinRunner snaps windows. Windows then
+    won't let you drag a maximized window down by its title bar, so
+    WinRunner does that for you (Settings -> Widgets -> Snap layouts, on
+    by default). Tick "Drag a window to the top edge..." there to get the
+    layouts, the left / right halves and maximize when dragging.
+    Drag a snapped window away by its title bar and it gets the size it
+    had before it was snapped (you can switch that off in the same place).
 - Spotify player (Settings -> Widgets, on by default on the main bar)
     Shows the song and artist from the Spotify desktop app, with
     previous, play/pause and next buttons. It only reads and controls
@@ -196,6 +211,17 @@ on the left (Menu, Bars, Buttons, Widgets, Look, Theme, Taskbar & tray, About).
   Bars                  main monitor only, all monitors, or the ones you
                         tick; bottom or top of the screen (on a top bar
                         the menu and pop-ups open downward)
+  Second bar            tick "Show a second bar..." for another bar along
+                        the other edge (top if the main bar is at the
+                        bottom). Under it, tick what goes on each bar:
+                        Menu button, Open apps, Snap layouts button,
+                        Spotify player, Tray icons + volume, Clock, Show
+                        desktop. The second bar starts with just the clock.
+                        Tray icons show on one bar only (the main bar wins).
+                        The second bar has its own monitor choice: same as
+                        the main bar, all monitors, or the ones you pick
+                        (pick none = no second bar). The main bar's own
+                        monitors are chosen under "Show the main bar on".
   Open apps on each bar all open apps, or only the apps on that monitor
   Buttons               one button per window, or one per app (grouped);
                         icon + title, icons only, or titles only

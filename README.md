@@ -8,21 +8,19 @@ A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open ap
 
 ## Download
 
-**Latest version: v1.9** (Nov 12, 2026)
+**Latest version: v1.10** (Nov 14, 2026)
 
-- [WinRunner_v1.9_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.9/WinRunner_v1.9_no-install.zip) - 168 KB
-- [WinRunner_v1.9_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.9/WinRunner_v1.9_Setup.exe) - 203 KB
-- [WinRunner_v1.9_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.9/WinRunner_v1.9_source.zip) - 156 KB
+- [WinRunner_v1.10_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.10/WinRunner_v1.10_no-install.zip) - 207 KB
+- [WinRunner_v1.10_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.10/WinRunner_v1.10_Setup.exe) - 241 KB
 
-What's new in v1.9:
+What's new in v1.10:
 
-- New: choose which monitor's bar shows the tray icons (Settings -> Taskbar & tray)
-- Fixed: maximized and snapped windows could flicker or resize by themselves (Windows kept leaving WinRunner's bars out of the screen area)
-- New: you can switch Windows' own Snap windows off: WinRunner now lets you drag a maximized window down by its title bar (Settings -> Widgets -> Snap layouts)
-- New: a snapped window gets its old size back when you drag it away by its title bar
-- New: calculator in the menu search: type a sum like 15*8 or 20% of 340 and press Enter to copy the answer
-- New: an optional second bar along the other edge of the screen, and you choose what goes on each bar: menu, open apps, tray, clock, Spotify and more (Settings -> Bars), each on the monitors you pick
-- Win+E opens FileRunner when FileRunner is set as your file browser, even when Windows ignores that setting
+- Fixed: tray icons of some apps (like Discord, Teams and Bitwarden) were missing after WinRunner started
+- New: right-click the tray arrow and pick "Ask apps for their tray icons again" if an icon is still missing
+- Fixed: an empty strip could stay at the top of a screen after the second bar was switched off
+- New: Customize bars (right-click a bar): drag items to the left, center or right of any bar, add or take off items; every bar keeps its own layout
+- New: plugins: drop a .cs file into the Plugins folder to add your own item to the bars (Customize bars shows them)
+- Changed: the Spotify player is now a plugin: put it on any bar with Customize bars (its width and buttons are still in Settings -> Widgets)
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 
@@ -41,10 +39,6 @@ Older versions are on the [Releases page](https://github.com/codenomics/WinRunne
 3. Open the folder and double-click the app's .exe. Nothing is installed; delete the folder to remove it.
 
 Windows says "Windows protected your PC"? Click More info > Run anyway. It shows that for apps without a paid signing certificate.
-
-## Source code
-
-Want to see how it works, or build it yourself? Download the file ending in `_source.zip` above, extract it and double-click `Build.bat`. It only uses the C# compiler that already comes with Windows, so there is nothing to install.
 
 ## More details
 
@@ -146,7 +140,7 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     Clicking the network icon shows what you're connected with, plus
     links to Wi-Fi networks and the Windows network settings.
     The Windows Security (shield) icon opens Windows Security.
-- Snap layouts (button just left of the Spotify player, or Win+Z)
+- Snap layouts (the button on the bar, or Win+Z)
     Opens a small picker of screen layouts (halves, thirds, quarters ...).
     Click a spot and the window you were just in snaps there; then click
     other open windows to fill the empty spots. Layouts stop at the bar.
@@ -174,7 +168,8 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     layouts, the left / right halves and maximize when dragging.
     Drag a snapped window away by its title bar and it gets the size it
     had before it was snapped (you can switch that off in the same place).
-- Spotify player (Settings -> Widgets, on by default on the main bar)
+- Spotify player (a built-in plugin, on the main bar to start with;
+  add, move or remove it with Customize bars)
     Shows the song and artist from the Spotify desktop app, with
     previous, play/pause and next buttons. It only reads and controls
     Spotify, nothing else that plays sound. Click the song name to bring
@@ -213,21 +208,31 @@ on the left (Menu, Bars, Buttons, Widgets, Look, Theme, Taskbar & tray, About).
                         the menu and pop-ups open downward)
   Second bar            tick "Show a second bar..." for another bar along
                         the other edge (top if the main bar is at the
-                        bottom). Under it, tick what goes on each bar:
-                        Menu button, Open apps, Snap layouts button,
-                        Spotify player, Tray icons + volume, Clock, Show
-                        desktop. The second bar starts with just the clock.
-                        Tray icons show on one bar only (the main bar wins).
+                        bottom). It starts with just the clock.
                         The second bar has its own monitor choice: same as
                         the main bar, all monitors, or the ones you pick
                         (pick none = no second bar). The main bar's own
                         monitors are chosen under "Show the main bar on".
+  What's on each bar    click "Customize bars..." (or right-click a bar and
+                        pick Customize bars...). Every bar then shows its
+                        items as boxes: Menu button, Open apps, Snap
+                        layouts button, Spotify player, Tray icons +
+                        volume, Clock, Show desktop. Each bar has a left,
+                        center and right area.
+                          - drag a box to a new spot or onto another bar
+                          - drag an item from the little window onto a bar
+                            to add it
+                          - click the X on a box to take it off that bar
+                        Every bar (each monitor, top and bottom) keeps its
+                        own layout. Click Done when you're finished.
+                        Tray icons show on one bar only (the main bar wins).
   Open apps on each bar all open apps, or only the apps on that monitor
   Buttons               one button per window, or one per app (grouped);
                         icon + title, icons only, or titles only
   Buttons               also: the widest a button with a title may get
-  Widgets               the Snap layouts button and Win+Z; the Spotify player: off, main monitor's bar or every
-                        bar, its width for each monitor, and the buttons on/off
+  Widgets               the Snap layouts button and Win+Z; the Spotify player's
+                        width for each monitor and its buttons on/off (which
+                        bars it is on is set with Customize bars)
   Look                  Solid, Clear (see-through), Blur, or Frosted glass,
                         and how strong the background color is (0% fully
                         see-through, 100% solid; each look remembers its
@@ -261,6 +266,21 @@ Next wallpaper, Pause rotation, Crop a picture for a monitor... and
 Manage pictures...
 Turning it on closes the WallRunner app and stops it starting with
 Windows, so the two don't both change the wallpaper.
+
+
+PLUGINS (extra items for the bars)
+----------------------------------
+A plugin is one .cs file that adds an item to the bars. Put the file in the
+"Plugins" folder next to WinRunner.exe (Customize bars has a button that
+opens it; if that folder can't be written to, WinRunner uses
+%APPDATA%\WinRunner\Plugins instead). WinRunner builds the file by itself
+when it starts, or when you click "Load plugins again" in Customize bars.
+The plugin then shows under PLUGINS in Customize bars: drag it onto a bar.
+- A plugin with a mistake in it is skipped; the reason is written to
+  WinRunner-log.txt.
+- Only add plugins you trust: a plugin can do anything WinRunner can.
+- The Spotify player is a plugin that comes built into WinRunner. A file
+  called SpotifyPlayer.cs in the Plugins folder is used instead of it.
 
 
 THEMES (Settings -> Theme)

@@ -1,6 +1,6 @@
 # WinRunner
 
-A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open apps, pinned apps, tray icons, volume and clock on one bar, plus a menu with search, categories, favorites and power buttons. It can sit next to the Windows taskbar or take its place.
+A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open apps, pinned apps, tray icons, volume and clock on one bar, plus a menu with search, categories, favorites and power buttons. It can sit next to the Windows taskbar or take its place. Arrange every bar your own way and add plugins: a PC meter, weather, ping, mic mute, launchers, clipboard history, notes and timer, a Spotify player and more.
 
 > This application is built by AI. I made this for myself and I'm uploading it to GitHub for backup and to share in case anyone can get any use out of it. It's pretty specific to my setup and my needs, but if you can get any use out of it, then enjoy.
 >
@@ -8,19 +8,29 @@ A taskbar and app menu for Windows 11 with a Cinnamon (Linux) feel: your open ap
 
 ## Download
 
-**Latest version: v1.10** (Nov 14, 2026)
+**Latest version: v1.11** (Nov 14, 2026)
 
-- [WinRunner_v1.10_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.10/WinRunner_v1.10_no-install.zip) - 207 KB
-- [WinRunner_v1.10_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.10/WinRunner_v1.10_Setup.exe) - 241 KB
+- [WinRunner_v1.11_no-install.zip](https://github.com/codenomics/WinRunner/releases/download/v1.11/WinRunner_v1.11_no-install.zip) - 210 KB
+- [WinRunner_v1.11_Setup.exe](https://github.com/codenomics/WinRunner/releases/download/v1.11/WinRunner_v1.11_Setup.exe) - 243 KB
+- [WinRunner_v1.11_source.zip](https://github.com/codenomics/WinRunner/releases/download/v1.11/WinRunner_v1.11_source.zip) - 185 KB
 
-What's new in v1.10:
+What's new in v1.11:
 
-- Fixed: tray icons of some apps (like Discord, Teams and Bitwarden) were missing after WinRunner started
-- New: right-click the tray arrow and pick "Ask apps for their tray icons again" if an icon is still missing
-- Fixed: an empty strip could stay at the top of a screen after the second bar was switched off
-- New: Customize bars (right-click a bar): drag items to the left, center or right of any bar, add or take off items; every bar keeps its own layout
-- New: plugins: drop a .cs file into the Plugins folder to add your own item to the bars (Customize bars shows them)
-- Changed: the Spotify player is now a plugin: put it on any bar with Customize bars (its width and buttons are still in Settings -> Widgets)
+- New: right-click a plugin on the bar for its own settings (the Spotify player's width and buttons moved there from Settings -> Widgets)
+- New: Volume and Network are now items of their own, so you can move them anywhere or take them off with Customize bars
+- New: the Network item shows the live download / upload speed (switch it off in Settings -> Widgets)
+- Changed: tray icons show on every bar you put the Tray icons item on (one bar or several); the monitor choice in Settings is gone
+- New: Launchers plugin: a row of app shortcuts; add a program or one of the apps open right now, and pick your own icon
+- New: PC meter plugin: CPU, memory and graphics card use, plus the graphics card temperature (NVIDIA cards)
+- New: Mic mute plugin: see if your microphone is live and mute it with one click
+- New: Ping plugin: ping time to an address you pick, with a colored dot when it gets slow or packets are lost
+- New: Weather plugin: temperature on the bar, the next few days with a click (weather data by Open-Meteo.com)
+- New: Clipboard history plugin: the last things you copied, click one to copy it again
+- New: Notes & timer plugin: a quick notepad, a countdown timer and a stopwatch
+- Fixed: web apps (like ones made with WebRunner) added from the open apps now get their own name and icon and open again
+- Fixed: windows that opened with their title bar hidden under a top bar now move down below it
+- Fixed: dragging a maximized browser window down by its title bar no longer pulls a tab off into a new window
+- Fixed: pop-ups from items at the edge of a monitor no longer spill onto the next monitor
 
 Older versions are on the [Releases page](https://github.com/codenomics/WinRunner/releases).
 
@@ -39,6 +49,10 @@ Older versions are on the [Releases page](https://github.com/codenomics/WinRunne
 3. Open the folder and double-click the app's .exe. Nothing is installed; delete the folder to remove it.
 
 Windows says "Windows protected your PC"? Click More info > Run anyway. It shows that for apps without a paid signing certificate.
+
+## Source code
+
+Want to see how it works, or build it yourself? Download the file ending in `_source.zip` above, extract it and double-click `Build.bat`. It only uses the C# compiler that already comes with Windows, so there is nothing to install.
 
 ## More details
 
@@ -123,8 +137,8 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     A button that pulses pink means the app wants your attention.
     Hover preview (switch it on in Settings): rest the mouse on a button
     to see the window; click the picture to switch to it, x to close it.
-- Tray icons and volume (left of the clock, main monitor's bar; Settings ->
-  Taskbar & tray can put the tray icons on another monitor's bar)
+- Tray icons (main monitor's bar to start with; put them on as many bars
+  as you like with Customize bars)
     While WinRunner has the Windows taskbar hidden, apps' tray icons
     (Discord, Steam ...) show here. Left-click, right-click and
     double-click work like on the Windows taskbar.
@@ -133,13 +147,17 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     Right-click the arrow to pick which icons are always shown.
     When you open the tray with the arrow, clicking anywhere else folds
     it away again (you can switch that off in Settings).
+    The Windows Security (shield) icon opens Windows Security.
+- Volume (an item of its own: put it on any bar with Customize bars)
     The speaker is the Windows volume: click it for a slider, Mute, and
     the list of speakers/headsets and microphones (click one to switch
     to it), or roll the mouse wheel over it. Hover shows which device
     is in use.
-    Clicking the network icon shows what you're connected with, plus
-    links to Wi-Fi networks and the Windows network settings.
-    The Windows Security (shield) icon opens Windows Security.
+- Network (an item of its own: put it on any bar with Customize bars)
+    The network icon plus the live download / upload speed (switch the
+    speed off in Settings -> Widgets). Click it to see what you're
+    connected with, plus links to Wi-Fi networks and the Windows
+    network settings.
 - Snap layouts (the button on the bar, or Win+Z)
     Opens a small picker of screen layouts (halves, thirds, quarters ...).
     Click a spot and the window you were just in snaps there; then click
@@ -176,6 +194,27 @@ taskbar is hidden and WinRunner's bar sits at the very bottom (or top).
     Spotify forward (or start it). Each monitor has its own width.
     You can hide the buttons and show only the title: click = play/pause,
     double-click = next song, middle-click = open Spotify.
+    Right-click the player and pick "Spotify player settings..." for its
+    width (on that monitor) and the buttons on/off.
+- More built-in plugins (add any of them with Customize bars; right-click
+  one for its settings):
+    Launchers         a row of app shortcuts. Add a program, or one of the
+                      apps open right now; pick your own icon if you like.
+    PC meter          CPU, memory and graphics card use, plus the graphics
+                      card temperature (NVIDIA cards). Click = Task Manager.
+    Mic mute          shows if your microphone is live; click to mute or
+                      unmute it for every app.
+    Ping              ping time to an address you pick (1.1.1.1 to start),
+                      cyan / yellow when slow / red when lost. Click for the
+                      last minute.
+    Weather           temperature and a weather sign; click for the next
+                      days. Pick your town or ZIP code in its settings.
+                      Weather data by Open-Meteo.com (free, no account).
+    Clipboard history the last things you copied (text only, kept in memory
+                      only); click a line to copy it again.
+    Notes & timer     a notepad that saves as you type, a countdown timer
+                      and a stopwatch. The time shows on the bar while it
+                      runs.
 - Clock
     Click it for a calendar (arrows change the month).
 - Show desktop (thin strip at the far right end)
@@ -216,8 +255,8 @@ on the left (Menu, Bars, Buttons, Widgets, Look, Theme, Taskbar & tray, About).
   What's on each bar    click "Customize bars..." (or right-click a bar and
                         pick Customize bars...). Every bar then shows its
                         items as boxes: Menu button, Open apps, Snap
-                        layouts button, Spotify player, Tray icons +
-                        volume, Clock, Show desktop. Each bar has a left,
+                        layouts button, Tray icons, Network, Volume, Clock,
+                        Show desktop, and the plugins. Each bar has a left,
                         center and right area.
                           - drag a box to a new spot or onto another bar
                           - drag an item from the little window onto a bar
@@ -225,14 +264,13 @@ on the left (Menu, Bars, Buttons, Widgets, Look, Theme, Taskbar & tray, About).
                           - click the X on a box to take it off that bar
                         Every bar (each monitor, top and bottom) keeps its
                         own layout. Click Done when you're finished.
-                        Tray icons show on one bar only (the main bar wins).
+                        Tray icons show on every bar you put them on.
   Open apps on each bar all open apps, or only the apps on that monitor
   Buttons               one button per window, or one per app (grouped);
                         icon + title, icons only, or titles only
   Buttons               also: the widest a button with a title may get
-  Widgets               the Snap layouts button and Win+Z; the Spotify player's
-                        width for each monitor and its buttons on/off (which
-                        bars it is on is set with Customize bars)
+  Widgets               the network speed on/off; the Snap layouts button
+                        and Win+Z
   Look                  Solid, Clear (see-through), Blur, or Frosted glass,
                         and how strong the background color is (0% fully
                         see-through, 100% solid; each look remembers its
@@ -240,7 +278,7 @@ on the left (Menu, Bars, Buttons, Widgets, Look, Theme, Taskbar & tray, About).
                         (thinner) bar; the colored line along the top on/off.
                         The app menu uses the same look as the bar.
   Windows taskbar       hide the Windows taskbar (WinRunner takes over);
-                        show tray icons on WinRunner's bar while it's hidden;
+                        fold the tray away when you click somewhere else;
                         Windows key opens the WinRunner menu; start
                         WinRunner when Windows starts
   About                 the version, Check for updates, and a tick box to
@@ -279,8 +317,10 @@ The plugin then shows under PLUGINS in Customize bars: drag it onto a bar.
 - A plugin with a mistake in it is skipped; the reason is written to
   WinRunner-log.txt.
 - Only add plugins you trust: a plugin can do anything WinRunner can.
-- The Spotify player is a plugin that comes built into WinRunner. A file
-  called SpotifyPlayer.cs in the Plugins folder is used instead of it.
+- A plugin can have its own settings: right-click it on a bar and pick
+  "<plugin name> settings...".
+- The plugins listed above come built into WinRunner. A file with the same
+  name in the Plugins folder (like SpotifyPlayer.cs) is used instead.
 
 
 THEMES (Settings -> Theme)
